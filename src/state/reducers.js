@@ -12,6 +12,7 @@ export const carReducer = (state = initialCar, action) => {
         case types.ADD_FEATURE: {
             return {
                 ...state,
+                price: state.price + action.payload.feature.price,
                 features: [...state.features, action.payload.feature]
             }
         };
