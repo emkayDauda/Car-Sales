@@ -37,6 +37,7 @@ const App = () => {
 
   const rootReducer = combineReducers({
     car: reducers.carReducer,
+    store: reducers.storeReducer,
   })
 
   const store = createStore(
@@ -52,7 +53,7 @@ const App = () => {
         <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures store={state.store} />
+        <AdditionalFeatures  />
         <Total />
       </div>
     </div>
