@@ -8,3 +8,10 @@ export const addFeature = (feature) => {
         }
     };
 }
+
+export const removeFeature = feature => {
+    return {
+        type: actionTypes.REMOVE_FEATURE,
+        payload: {feature: feature}
+    }
+}

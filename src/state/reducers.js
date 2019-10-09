@@ -17,6 +17,14 @@ export const carReducer = (state = initialCar, action) => {
             }
         };
 
+        case types.REMOVE_FEATURE: {
+            const remainingFeatures = state.features.filter(feature => feature.id !== action.payload.feature.id)
+            return {
+                ...state,
+                features: remainingFeatures
+            }
+        }
+
         default: return state
     }
 }
