@@ -53,7 +53,7 @@ const App = () => {
       </div>
       <div className="box">
         <AdditionalFeatures store={state.store} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <Total />
       </div>
     </div>
    </Provider>
