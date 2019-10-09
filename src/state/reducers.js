@@ -6,13 +6,13 @@ const initialCar = {
     image:
       'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
     features: []
-  },
-export const carReducer = (car = initialCar, action) => {
+  };
+export const carReducer = (state = initialCar, action) => {
     switch(action.type){
         case types.ADD_FEATURE: {
             return {
-                ...car,
-                features: [...car.features, action.payload.feature]
+                ...state,
+                features: [...state.features, action.payload.feature]
             }
         };
 
