@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import AdditionalFeature from './AdditionalFeature';
 
 export const AdditionalFeatures = props => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
