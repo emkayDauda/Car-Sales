@@ -39,12 +39,13 @@ const store = [
 export const storeReducer = (state =  store, action) => {
     switch (action.type) {
         case types.ADD_FEATURE:{
-            const nonAddedFeatures = state.filter(feature => feature.id !== action.payload.id)
+            const nonAddedFeatures = state.filter(feature => feature.id !== action.payload.feature.id)
             return nonAddedFeatures;
         }
         case types.REMOVE_FEATURE:{
-            const removeFeature = state.filter(feature => feature.id !== action.payload.feature)
-            return [...state, removeFeature];
+            // const removeFeature = state.filter(feature => feature.id !== action.payload.feature)
+            // console.log(state, removeFeature);           
+            return [...state, action.payload.feature];
         }
     
         default: return state;
